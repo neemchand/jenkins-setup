@@ -6,9 +6,6 @@ pipeline {
         APP_VERSION = '1'
     }
     stages {
-        stage('Checkout') {
-            checkout scm
-        }
         stage('Build') {
             steps {
                    sh 'php --version'
@@ -17,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'test ends....'
+                echo 'test Done....'
             }
         }
         stage('Deploy') {
