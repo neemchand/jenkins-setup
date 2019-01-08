@@ -1,27 +1,20 @@
 pipeline {
     agent any
 
-    environment {
-        APP_VERSION = '1'
-    }
-    
     stages {
-        stage('Build environment') {
+        stage('Build') {
             steps {
-                echo 'Building..'
-                sh 'printenv'
-                sh 'echo $GIT_BRANCH'
-                sh 'echo $GIT_COMMIT'
+                echo 'Building..12'
             }
         }
         stage('Test') {
             steps {
-               echo 'PHP Unit tests'
+                echo 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying to heroku....'
+                echo 'Deploying....'
             }
         }
     }
