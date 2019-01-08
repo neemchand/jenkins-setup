@@ -6,6 +6,7 @@ pipeline {
         APP_VERSION = '1'
     }
     stages {
+
         stage('Build') {
             steps {
                    sh 'php --version'
@@ -14,7 +15,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "./vendor/bin/phpunit"
                 echo 'test Done....'
             }
         }
