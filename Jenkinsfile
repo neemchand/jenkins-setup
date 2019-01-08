@@ -6,10 +6,11 @@ pipeline {
     }
     stages {
         stage('Build') {
-            steps {
-                agent {
+            agent {
                     docker { image 'php'}
-                     }
+                   }    
+            steps {
+                   sh 'php --version'
             }
         }
         stage('Test') {
