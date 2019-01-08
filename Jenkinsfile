@@ -7,10 +7,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               agent {
-                    docker {
-                            image 'php'
-                        }
+                agent {
+                    docker { image 'php'}
                      }
             }
         }
