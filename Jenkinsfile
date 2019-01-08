@@ -7,10 +7,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                sh 'printenv'
-                sh 'echo $GIT_BRANCH'
-                sh 'echo $GIT_COMMIT'
+               agent {
+                    docker {
+                            image 'php'
+                        }
+                     }
             }
         }
         stage('Test') {
