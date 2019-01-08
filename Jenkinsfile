@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'test Done....'
+                echo 'test ends....'
             }
         }
         stage('Deploy') {
