@@ -1,14 +1,12 @@
 pipeline {
-    agent any
+    agent {  docker { image 'php'}
+                   } 
     
     environment {
         APP_VERSION = '1'
     }
     stages {
         stage('Build') {
-            agent {
-                    docker { image 'php'}
-                   }    
             steps {
                    sh 'php --version'
             }
