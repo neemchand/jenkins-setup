@@ -1,6 +1,6 @@
 pipeline {
     agent {  docker { image 'php'}
-                   } 
+                } 
     
     environment {
         APP_VERSION = '1'
