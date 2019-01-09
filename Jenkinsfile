@@ -27,6 +27,7 @@ pipeline {
                             git push origin heroku master"
                         """
                     }
+            }
             post {
                 success {
 
