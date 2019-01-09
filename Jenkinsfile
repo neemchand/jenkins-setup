@@ -21,10 +21,23 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
+            post {
+                always {
+                    echo 'Deploying..1.'
+                }
+
+                success {
+                    echo 'Deploying ...2.'
+                }
+
+                failure {
+                    echo 'Deploying...3.'
+                }
+              }
         }
     }
     post {
-      always {
+        always {
           echo 'test Done...1.'
       }
 
