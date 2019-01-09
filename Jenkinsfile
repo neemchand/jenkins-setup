@@ -20,13 +20,13 @@ pipeline {
         stage('Deploy to UAT') {
             steps {
                 echo 'Deploying to uat....'
-            }
             script {
                     sshagent(['ci-ssh']) {
                         sh """
                             git push origin heroku master"
                         """
                     }
+            }        
             }
             post {
                 success {
