@@ -22,14 +22,18 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        post {
-                success {
-                     echo 'success2'
-                }
-
-                failure {
-                    echo 'failded11'
-                }
-            }
-        }
     }
+    post {
+      always {
+          echo 'test Done...1.'
+      }
+
+      success {
+          echo 'test ...2.'
+      }
+
+      failure {
+          echo 'test Done...3.'
+      }
+    }
+}
