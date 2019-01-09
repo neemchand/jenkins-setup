@@ -8,13 +8,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                   sh 'docker-compose up' 
                    sh 'php --version'
                    sh 'composer install'
             }
         }
         stage('Test') {
             steps {
-                echo 'test Done...2.'
+                echo 'run unit test'
             }
         }
         stage('Deploy to UAT') {
@@ -23,6 +24,7 @@ pipeline {
             }
             post {
                 success {
+
                     echo 'Deployment to uat success'
                 }
 
@@ -42,7 +44,7 @@ pipeline {
       }
 
       failure {
-          echo 'test Done...3.'
+          echo 'failure'
       }
     }
 }
