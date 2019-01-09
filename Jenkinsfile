@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Deploying to uat....'
             script {
-                   sh ' git push origin heroku master'
+                   sh 'git push origin heroku master'
                 }        
             }
             post {
