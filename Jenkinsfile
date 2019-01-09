@@ -22,5 +22,15 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        post {
+                success {
+                     echo 'success2'
+                }
+
+                failure {
+                    echo 'failded11'
+                }
+            }
+        }
     }
 }
