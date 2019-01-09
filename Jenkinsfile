@@ -17,21 +17,17 @@ pipeline {
                 echo 'test Done...2.'
             }
         }
-        stage('Deploy') {
+        stage('Deploy to UAT') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying to uat....'
             }
             post {
-                always {
-                    echo 'Deploying..1.'
-                }
-
                 success {
-                    echo 'Deploying ...2.'
+                    echo 'Deployment to uat success'
                 }
 
                 failure {
-                    echo 'Deploying...3.'
+                    echo 'Deployment to uat fails'
                 }
               }
         }
