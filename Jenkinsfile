@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                   sh 'docker-compose up' 
                    sh 'php --version'
                    sh 'composer install'
             }
