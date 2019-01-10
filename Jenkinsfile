@@ -23,17 +23,6 @@ pipeline {
                 sh 'git remote add heroku1 git@heroku.com:neem-testapp.git'
                 sh 'git push heroku1 origin/master:master' 
             }
-            post {
-                success {
-                    echo 'Deployment to uat success'
-                    slackSend(color: '#BDFFC3', message: 'build success!!')
-                }
-
-                failure {
-                    echo 'Deployment to uat fails'
-                     slackSend(color: '#E01563', message: 'build fails!!')
-                }
-              }
         }
     }
     post {
