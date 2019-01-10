@@ -23,8 +23,8 @@ pipeline {
             }
             post {
                 success {
-
                     echo 'Deployment to uat success'
+                    slackSend(color: '#BDFFC3', message: 'success')
                 }
 
                 failure {
