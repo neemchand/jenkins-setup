@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 123
+                    Laravel thorugh circle CI
                 </div>
 
                 <div class="links">
