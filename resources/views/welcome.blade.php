@@ -80,7 +80,6 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel thorugh circle CI
-                    @php \Log::debug('Test debug messag2e'); @endphp    
                 </div>
 
                 <div class="links">
