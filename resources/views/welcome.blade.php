@@ -80,7 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel thorugh circle CI
-                    @php echo"check rollbar" @endphp    
+                    @php \Log::debug('Test debug message'); @endphp    
                 </div>
 
                 <div class="links">
