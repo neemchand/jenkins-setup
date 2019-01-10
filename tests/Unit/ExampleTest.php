@@ -12,8 +12,11 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
-    {
+    public function testHelloWorld() {
         $this->assertTrue(true);
+        $this->assertFalse(false);
+        $this->assertNotEmpty(['hello']);
+        $this->assertEquals(true, true);
     }
+
 }
