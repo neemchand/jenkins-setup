@@ -20,9 +20,6 @@ pipeline {
         stage('Deploy to UAT') {
             steps {
                 echo 'Deploying to uat....'
-            script {
-                   sh 'git push origin heroku master'
-                }        
             }
             post {
                 success {
