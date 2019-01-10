@@ -9,8 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                    sh 'php --version'
-                   sh 'composer install'
-            }
+             }
         }
         stage('Test') {
             steps {
@@ -29,7 +28,7 @@ pipeline {
 
                 failure {
                     echo 'Deployment to uat fails'
-                     slackSend(color: '#E01563', message: 'build fails!!')
+                    slackSend(color: '#E01563', message: 'build fails!!')
                 }
               }
         }
