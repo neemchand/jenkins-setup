@@ -80,6 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel thorugh circle CI
+                    @php echo $test; @endphp 
                 </div>
 
                 <div class="links">
