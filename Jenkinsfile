@@ -20,6 +20,9 @@ pipeline {
         stage('Deploy to UAT') {
             steps {
                 echo 'Deploying to uat....'
+                script {
+                   sh 'git push origin heroku master'
+                }    
             }
             post {
                 success {
@@ -29,6 +32,7 @@ pipeline {
 
                 failure {
                     echo 'Deployment to uat fails'
+                     slackSend(color: '#E01563', message: 'build fails!!')
                 }
               }
         }
