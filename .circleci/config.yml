@@ -19,7 +19,7 @@ jobs:
           name: Install Composer
           command: |
             sudo composer self-update
-            composer install --prefer-source --no-interaction --dev
+            composer install --prefer-source --no-interaction --dev --ignore-platform-reqs
       - run:       
           name: Run unit tests
           command: |
