@@ -18,7 +18,7 @@ jobs:
       - run:       
           name: Run unit tests
           command: |
-            ./vendor/bin/phpunit
+            ./vendor/phpunit/phpunit/phpunit
       - run:       
           name: Deploy Master to Heroku
           command: |
