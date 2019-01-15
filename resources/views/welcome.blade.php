@@ -79,7 +79,6 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    @php echo $rest;  @endphp
                     Laravel chaosmonkey app test
                 </div>
 
