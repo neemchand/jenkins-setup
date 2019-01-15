@@ -15,15 +15,6 @@ jobs:
           name: Install System Dependencies
           command: |
              sudo apt-get update && sudo apt-get -f install && sudo apt-get install wget
-      - run: 
-          name: Install Composer
-          command: |
-            sudo composer self-update
-            composer install --prefer-source --no-interaction --dev --ignore-platform-reqs
-      - run:       
-          name: Run unit tests
-          command: |
-            ./vendor/phpunit/phpunit/phpunit
       - run:       
           name: Deploy Master to Heroku
           command: |
